@@ -1,6 +1,6 @@
 const chalk = require('chalk')
 module.exports = async(client) => {
-  const errorLogs = new client.Discord.WebhookClient({ url: process.env['errorwebhook']})
+  const errorLogs = new client.Discord.WebhookClient({ url: process.env.ERROR_WEBHOOK})
   process.on("unhandledRejection", async(reason, p, origin) => {
     if(reason === 'DiscordAPIError: Missing Access') return;
   console.log(chalk.hex('#ff5252').bold("[antiCrash] :: Unhandled Rejection/Catch"));

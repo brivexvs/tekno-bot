@@ -24,7 +24,7 @@ const colors = {
     success: '#2f3136'
 }
 const fs = require('fs')
-const Bottoken = process.env['token']
+const Bottoken = process.env.TOKEN
 
 client.slashcommands = new Collection()
 client.Discord = Discord;
@@ -42,7 +42,7 @@ client.login(Bottoken).then(console.log('>> Logged in'))
 
 
 const mongoose = require('mongoose')
-	mongoose.connect(process.env['mongo'], {
+	mongoose.connect(process.env.MONGO, {
 		useNewUrlParser: true,
     useUnifiedTopology: true,
 	}).then(console.log('[MongoDB] Connected to the Database'))

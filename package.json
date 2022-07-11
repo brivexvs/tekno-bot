@@ -1,0 +1,46 @@
+{
+    "name": "bump-bot",
+    "version": "1.0.0",
+    "description": "Bump Bot",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "node-update": "npm i --save-dev node@16 && npm config set prefix=$(pwd)/node_modules/node && export PATH=$(pwd)/node_modules/node/bin:$PATH",
+        "node-clean": "rm -rf node_modules && rm package-lock.json && npm cache clear --force && npm cache clean --force && npm i",
+        "node-update-then-clean": "npm run node-update && npm run node-            clean"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "node": "16.x.x"
+    },
+    "dependencies": {
+        "@replit/database": "^2.0.2",
+        "advanced-errors": "^1.0.1",
+        "axios": "^0.27.2",
+        "chalk": "^4.0.0",
+        "discord.js": "^13.7.0",
+        "easy-json-database": "^1.5.0",
+        "express": "^4.18.1",
+        "humanize-duration": "^3.27.2",
+        "jquery": "^3.6.0",
+        "moment": "^2.29.3",
+        "moment-timezone": "^0.5.34",
+        "mongoose": "^6.3.4",
+        "mysql2": "^2.3.3",
+        "npm": "^8.13.2",
+        "parse-ms": "^2.1.0",
+        "quickmongo": "^5.1.2",
+        "sequelize": "^6.3.5",
+        "sequelize-cli": "^6.4.1",
+        "simple-json-db": "^2.0.0",
+        "sqlite3": "^5.0.0"
+    },
+    "optionalDependencies": {
+        "dotenv": "^8.2.0"
+    },
+    "devDependencies": {
+        "node": "^16.14.2"
+    }
+}
